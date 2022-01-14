@@ -1,0 +1,45 @@
+.hero {
+    padding-top: 130px;
+
+    h1 {
+        @include breakpoints-up(tablet){
+            br {
+                display: none;
+            }
+        };    
+    }
+
+    background: {
+        image: url('/images/bg-header-mobile.png');
+        size: cover;
+        position: center top;
+        repeat: no-repeat;
+    }
+
+    @include breakpoints-up(tablet) {
+        background-image: url('/images/bg-header-desktop.png')
+    }
+
+    &__logo {
+        padding-bottom: 76px;
+        text-align: center;
+        @include breakpoints-up(tablet) {
+            padding-bottom: 70px;
+            img {
+                height: 130px;
+                width: 130px;
+            }
+        }
+    }
+
+
+    &__description {
+        padding-bottom: 52px;
+        @include breakpoints-up(tablet) {
+            padding-bottom: 56px;
+            font-size: 20px;
+            line-height: 1.7;
+        }
+    }
+
+}

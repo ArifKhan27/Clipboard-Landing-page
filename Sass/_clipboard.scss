@@ -1,0 +1,31 @@
+.clipboard {
+
+    &__intro {
+        margin-bottom: 70px;
+        @include breakpoints-up(tablet) {
+            margin-bottom: 100px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.7;
+            @include breakpoints-up(tablet) {
+                font-size: 18px;               
+            }
+        }
+    }
+
+    &__image {
+        margin: 0 20px;
+        @include breakpoints-up(tablet) {
+            max-width: 815px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            margin-bottom: 85px;
+            text-align: center;
+        }
+    }
+}

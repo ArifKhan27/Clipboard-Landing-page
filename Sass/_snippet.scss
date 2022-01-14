@@ -1,0 +1,67 @@
+.snippet {
+    margin-bottom: 130px;
+    @includ breakpoints-up(tablet) {
+        margin-bottom: 100px;
+    }
+
+    &__intro {
+        margin-bottom: 70px;
+        @include breakpoints-up(tablet) {
+            margin-bottom: 85px;
+        }
+        
+        p {
+            font-size: 18px;
+
+            @include breakpoints-up(tablet) {
+                line-height: 1.7;
+            }
+        }
+    }
+
+    &__functions {
+        @include breakpoints-up(tablet) {
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__image {
+        & img {
+            position: relative;
+            width: 100%;
+            padding: 0 32px 60px;
+            @include breakpoints-up(tablet) {
+                padding: 0;
+                left: -27px;
+                width: 100%;
+            }
+        }
+    }
+
+    &__features {
+        text-align: center;
+        margin: 0 42px;
+        @include breakpoints-up(tablet) {
+            text-align: left;
+            margin-left: 80px;
+            max-width: 340px;
+        }
+       
+        p {
+            // max-width: 400px;
+            margin: auto;
+            font-size: 16px;
+            margin-bottom: 60px;
+            line-height: 1.6;
+            @include breakpoints-up(tablet) {
+                
+                margin-bottom: 60px;
+                line-height: 1.6;
+            
+            }
+        }
+        
+    }
+}

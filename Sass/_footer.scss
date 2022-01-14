@@ -1,0 +1,125 @@
+.footer {
+    background-color: $lightGrayishBlue;
+    text-align: center;
+    padding-top: 52px;
+    padding-bottom: 52px;
+    @include breakpoints-up(desktop) {
+        text-align: left;
+        padding: 45px 165px;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr 1fr; 
+        grid-template-areas: 
+        'one two three four'
+        'one two three four'
+        ;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    &__logo {
+        margin-bottom: 48px;
+        @include breakpoints-up(desktop) {
+            margin: 0;
+            grid-area: one;
+        }        
+        img {
+            height: 57px;
+            width: 57px;
+            @include breakpoints-up(desktop) {
+                height: 55px;
+                width: 55px;    
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        @include breakpoints-down(desktop) {
+            
+            & > a {
+                width: max-content;
+                margin-left: auto;
+                margin-right: auto;   
+            }
+        }
+        @include breakpoints-up(desktop) {
+            margin-bottom: 0;
+            grid-area: two;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            'faq policy guide'
+            'contact kit blank'
+            ;
+            gap: 1rem;
+        }
+
+        .faq {
+            @include breakpoints-up(desktop) {
+                grid-area: faq;
+            }
+        }
+
+        .contact {
+            @include breakpoints-up(desktop) {
+                grid-area: contact;
+                align-self: end;
+            }
+        }
+        .policy {
+            @include breakpoints-up(desktop) {
+                grid-area: policy;
+            }
+        }
+        .kit {
+            @include breakpoints-up(desktop) {
+                grid-area: kit;
+                align-self: end;
+            }
+        }
+        .guide {
+            @include breakpoints-up(desktop) {
+                grid-area: guide;
+            }
+        }
+
+
+        a {
+            
+            text-decoration: none;
+            color: $darkGrayishBlue;
+            margin-bottom: 32px;
+            width: fit-content;
+
+            @include breakpoints-up(desktop) {
+                margin-bottom: 0;
+            }
+            &:hover {
+                color: $cyan;
+            }
+        }
+    }
+
+    &__socials {
+       
+        @include breakpoints-up(desktop) {
+            grid-area: four;
+            align-self: center;
+            justify-self: end;
+        }
+        
+        a:not(:last-child) {
+            margin-right: 42px;
+            @include breakpoints-up(desktop) {
+                margin-right: 26px;
+            }
+        }
+        a:hover {
+            svg path{
+                fill: $cyan;
+            }
+        }
+    }
+}

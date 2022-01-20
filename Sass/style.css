@@ -134,7 +134,7 @@ button.btn2:hover, .button.btn2:hover {
 
 .hero {
   padding-top: 130px;
-  background-image: url("/images/bg-header-mobile.png");
+  background-image: url("images/bg-header-mobile.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -148,7 +148,7 @@ button.btn2:hover, .button.btn2:hover {
 
 @media screen and (min-width: 740px) {
   .hero {
-    background-image: url("/images/bg-header-desktop.png");
+    background-image: url("images/bg-header-desktop.png");
   }
 }
 
